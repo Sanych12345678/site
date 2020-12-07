@@ -1,0 +1,1222 @@
+a {
+    color: #373737;
+    -webkit-transition: color .3s ease;
+    transition: color .3s ease
+}
+
+a:hover {
+    text-decoration: none;
+    color: #ff9d00
+}
+
+#menuToggle {
+    display: block;
+    position: fixed;
+    top: 1.7rem;
+    left: 4%;
+    z-index: 50
+}
+
+#menuToggle input {
+    display: block;
+    width: 40px;
+    height: 32px;
+    position: absolute;
+    top: -7px;
+    left: -5px;
+    cursor: pointer;
+    opacity: 0;
+    z-index: 2;
+    -webkit-touch-callout: none
+}
+
+#menuToggle span {
+    display: block;
+    width: 35px;
+    height: 6px;
+    margin-bottom: 3.5px;
+    position: relative;
+    background: #373737;
+    z-index: 1;
+    border: 1px solid #fff;
+    -webkit-transform-origin: 4px 0;
+    transform-origin: 4px 0;
+    -webkit-transition: background .5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity .55s ease, -webkit-transform .5s cubic-bezier(0.77, 0.2, 0.05, 1);
+    transition: background .5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity .55s ease, -webkit-transform .5s cubic-bezier(0.77, 0.2, 0.05, 1);
+    transition: transform .5s cubic-bezier(0.77, 0.2, 0.05, 1), background .5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity .55s ease;
+    transition: transform .5s cubic-bezier(0.77, 0.2, 0.05, 1), background .5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity .55s ease, -webkit-transform .5s cubic-bezier(0.77, 0.2, 0.05, 1)
+}
+
+#menuToggle span:first-child {
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0
+}
+
+#menuToggle span:nth-last-child(2) {
+    -webkit-transform-origin: 0 100%;
+    transform-origin: 0 100%
+}
+
+#menuToggle input:checked ~ span {
+    opacity: 1;
+    -webkit-transform: rotate(45deg) translate(-2px, -1px);
+    transform: rotate(45deg) translate(-2px, -1px);
+    background: #373737
+}
+
+#menuToggle input:checked ~ span:nth-last-child(3) {
+    opacity: 0;
+    -webkit-transform: rotate(0deg) scale(0.2, 0.2);
+    transform: rotate(0deg) scale(0.2, 0.2)
+}
+
+#menuToggle input:checked ~ span:nth-last-child(2) {
+    -webkit-transform: rotate(-45deg) translate(0, -1px);
+    transform: rotate(-45deg) translate(0, -1px)
+}
+
+#menu {
+    position: fixed;
+    top: 6rem;
+    left: 0;
+    width: 100%;
+    padding: 2rem 4rem;
+    z-index: 1;
+    background: #fff;
+    list-style-type: none;
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+    -webkit-transform: translate(-100%, 0);
+    transform: translate(0, -120%);
+    -webkit-transition: -webkit-transform .5s cubic-bezier(0.77, 0.2, 0.05, 1);
+    transition: -webkit-transform .5s cubic-bezier(0.77, 0.2, 0.05, 1);
+    transition: transform .5s cubic-bezier(0.77, 0.2, 0.05, 1);
+    transition: transform .5s cubic-bezier(0.77, 0.2, 0.05, 1), -webkit-transform .5s cubic-bezier(0.77, 0.2, 0.05, 1)
+}
+
+#menu li {
+    text-align: center;
+    padding: 7px 0;
+    font-size: 22px;
+    font-family: Roboto-Medium;
+}
+
+#menuToggle input:checked ~ ul {
+    -webkit-transform: none;
+    transform: none;
+}  
+
+.features {
+    background-color: #f4f4f4;
+    padding-top: 3rem;
+    padding-bottom: 5.5rem
+}
+
+.features-block-title {
+    text-align: center;
+    min-height: 10rem
+}
+
+.features-block-title h2 {
+    color: #ff9d00;
+    font-size: 3.6rem;
+    font-family: Roboto-Medium;
+    font-weight: 900
+}
+
+.features-block-title p {
+    font-size: 1.6rem
+}
+
+.features-block {
+    background-color: #fff;
+    min-height: 15rem;
+    margin-top: 3rem
+}
+
+.features-block img {
+    float: left;
+    padding: 4.5rem 1.5rem
+}
+
+.features-block h3 {
+    padding-top: 2.8rem;
+    font-size: 1.5rem;
+    font-family: Roboto-Bold
+}
+
+.features-block p {
+    font-size: 1.4rem;
+    font-family: Roboto-Light
+}
+
+.production {
+    padding-bottom: 4rem
+}
+
+.production-title {
+    text-align: center;
+    margin-bottom: 3rem
+}
+
+.production-title h2 {
+    text-transform: uppercase;
+    font-size: 2.7rem;
+    font-family: Roboto-Bold;
+    margin-top: 5.5rem;
+    margin-bottom: 0
+}
+
+.production-block {
+    text-align: center;
+    min-height: 40rem;
+    margin-bottom: 3.5rem
+}
+
+.production-block h3 {
+    font-size: 2rem;
+    font-family: Roboto-Medium;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    min-height: 5rem;
+    padding: 0 1rem
+}
+
+.production-block h3 span {
+    display: inline-block
+}
+
+.production-block img {
+    max-height: 25rem
+}
+
+.production-btn-light {
+    color: #9b9b9b;
+    background-color: #fff;
+    border: 1px solid #9b9b9b;
+    padding: 1.6rem 2.6rem
+}
+
+.production-btn-light:hover {
+    background-color: #f4f4f4
+}
+
+.production-btn {
+    padding: 1.7rem 2.6rem;
+    margin-left: 1rem
+}
+
+.offer {
+    position: relative;
+    padding: 7rem 0;
+    background-size: cover;
+    text-align: center;
+    color: #fff
+}
+
+.offer-title {
+    font-size: 3.2rem;
+    margin-top: 0;
+    line-height: 1
+}
+
+.offer p {
+    font-size: 2.6rem;
+    line-height: 1
+}
+
+.offer-form h3 {
+    font-size: 2rem;
+    font-family: Roboto-Light;
+    margin-top: 3rem;
+    margin-bottom: 0
+}
+
+.offer-form-input {
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+    color: #373737;
+    border: 1px solid #fff;
+    border-radius: 4px;
+    padding: 1rem;
+    width: 36rem;
+    height: 5.5rem;
+    transition: all .5s
+}
+
+.offer-form-input:focus {
+    transition: all .5s;
+    border: 1px solid #373737
+}
+
+.offer-form-input::placeholder {
+    text-align: center;
+    font-family: Roboto-Light;
+    font-size: 1.4rem
+}
+
+.offer-form-btn {
+    margin-top: 1.5rem;
+    padding: 2rem 3rem
+}
+
+.offer-form small {
+    display: block;
+    margin-top: 1rem;
+    font-size: 1.4rem;
+    font-family: Roboto-Light
+}
+
+.manufacture {
+    padding: 8.5rem 0
+}
+
+.manufacture-slider-nav {
+    margin-top: 1.3rem;
+    padding: 0 2.7rem;
+    transform: translatex(0.1rem);
+    margin-left: -.1rem
+}
+
+.manufacture-slider-nav img {
+    max-width: 15rem;
+    padding: .3rem;
+    cursor: pointer
+}
+
+.manufacture-slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translatey(-50%);
+    width: 2.5rem;
+    height: 95%;
+    background-color: #fff;
+    border: 1px solid #ff9d00;
+    transition: all .2s;
+    z-index: 1
+}
+
+.manufacture-slider-btn svg {
+    fill: #ff9d00
+}
+
+.manufacture-slider-btn:hover {
+    background-color: #ff9d00
+}
+
+.manufacture-slider-btn:hover svg {
+    fill: #fff
+}
+
+.manufacture-slider .prev-btn {
+    left: -.1rem
+}
+
+.manufacture-slider .next-btn {
+    right: -.1rem
+}
+
+.manufacture-title {
+    margin-top: 2.5rem;
+    background-color: #ff9d00;
+    padding: 2rem 2.5rem;
+    transform: translatex(-3rem);
+    width: 106.6%
+}
+
+.manufacture-title h2 {
+    margin: 0;
+    margin-left: .6rem;
+    font-size: 2.8rem;
+    color: #fff
+}
+
+.manufacture-info {
+    padding-top: 2.5rem
+}
+
+.manufacture-info p {
+    font-size: 1.9rem;
+    font-family: Roboto-Light;
+    margin-bottom: 1rem;
+    padding: .5rem
+}
+
+.clients {
+    padding-bottom: 3rem
+}
+
+.clients-title {
+    text-align: center;
+    margin-bottom: 3rem
+}
+
+.clients-title h2 {
+    text-transform: uppercase;
+    font-size: 2.7rem;
+    font-family: Roboto-Bold;
+    margin: 0
+}
+
+.clients-block {
+    padding: 1rem;
+    height: 15rem;
+    margin: 0;
+    width: 100%;
+    margin-bottom: 3rem;
+    cursor: pointer;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    overflow: hidden;
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+    border: 1px solid #f4f4f4;
+    border-radius: 5px;
+    transition: all .2s
+}
+
+.clients-block:hover {
+    -webkit-filter: grayscale(1%);
+    filter: grayscale(1%)
+}
+
+.reviews {
+    background-color: #f4f4f4;
+    padding: 6rem 0
+}
+
+.reviews-title {
+    text-align: center;
+    margin-bottom: 3rem
+}
+
+.reviews-title h2 {
+    text-transform: uppercase;
+    font-size: 2.7rem;
+    font-family: Roboto-Bold;
+    margin: 0
+}
+
+.reviews-block {
+    min-height: 42.5rem;
+    padding: 3rem 0;
+    border: 1px solid #dbdbdb;
+    border-radius: 4px;
+    background: #fff;
+    cursor: pointer
+}
+
+.reviews-block img {
+    margin: 0 auto
+}
+
+.reviews-block::focus img {
+    width: 100%
+}
+
+.reviews-btn {
+    position: absolute;
+    top: 50%;
+    transform: translatey(-50%);
+    width: 2.5rem;
+    height: 8rem;
+    background: none;
+    transition: all .2s;
+    z-index: 1
+}
+
+.reviews-btn svg {
+    width: auto;
+    height: 3rem;
+    fill: #ff9d00
+}
+
+.reviews-prev-btn {
+    left: -1.8rem
+}
+
+.reviews-next-btn {
+    right: -1.8rem
+}
+
+.contacts-block {
+    margin-top: 7.5rem;
+    position: absolute;
+    z-index: 8;
+    background-color: #fff;
+    height: 40rem;
+    width: 31rem
+}
+
+.contacts-block h2 {
+    display: none
+}
+
+.contacts-block .map-content {
+    padding: 1rem;
+    margin-left: 2rem;
+    line-height: 1
+}
+
+.contacts-block .map-content img {
+    display: inline-block;
+    float: left;
+    padding: 0 .5rem
+}
+
+.contacts-block .map-content h3 {
+    font-size: 1.8rem;
+    font-family: Roboto-Medium;
+    margin-left: 4rem
+}
+
+.contacts-block .map-content p {
+    font-size: 1.6rem;
+    font-family: Roboto-Light;
+    margin-left: 4rem
+}
+
+.contacts-btn {
+    margin-left: 4rem;
+    margin-top: 1rem;
+    padding: 1.7rem 2.4rem
+}
+
+.contacts .map {
+    height: 55rem
+}
+
+footer {
+    background-color: #1b1b1b;
+    height: 9rem;
+    text-align: center
+}
+
+footer p {
+    font-size: 1.3rem;
+    font-family: Roboto-Light;
+    color: #8c8c8c;
+    padding-top: 3.5rem
+}
+
+.popup {
+    z-index: 20;
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 9;
+    background-color: rgba(0, 0, 0, 0.5)
+}
+
+.popup-close {
+    position: absolute;
+    text-align: center;
+    top: -4rem;
+    right: -3.5rem;
+    width: 4rem;
+    border: none;
+    font-size: 4rem;
+    font-family: Roboto-Light;
+    background-color: transparent;
+    color: #fff
+}
+
+.popup-content {
+    text-align: center;
+    position: fixed;
+    left: 50%;
+    top: 10%;
+    transform: translatex(-50%);
+    z-index: 100;
+    background: #fff url(../img/popup/popup-feedback.jpg) center no-repeat;
+    background-size: cover;
+    min-height: 35rem;
+    width: 75rem
+}
+
+.popup-header {
+    margin: 0;
+    padding-top: 2rem;
+    padding-bottom: 2rem
+}
+
+.popup-header-wrap {
+    background-color: #ff9d00
+}
+
+.popup-header-wrap h3 {
+    text-transform: uppercase;
+    font-size: 2.1rem;
+    font-family: Roboto-Medium;
+    color: #fff
+}
+
+.popup-text {
+    color: #fff
+}
+
+.popup-text h4 {
+    margin-top: 3rem;
+    font-size: 3rem
+}
+
+.popup-text span {
+    font-size: 2.4rem;
+    line-height: .2
+}
+
+.popup-text p {
+    font-size: 2rem;
+    font-family: Roboto-Light;
+    margin-bottom: 1rem;
+    margin-top: 2.5rem
+}
+
+.popup-form-input {
+    margin-right: 1.5rem;
+    margin-top: .5rem;
+    text-align: center;
+    color: #373737;
+    border: 1px solid #fff;
+    border-radius: 4px;
+    padding: 1rem;
+    width: 36rem;
+    height: 6rem;
+    transition: all .5s
+}
+
+.popup-form-input:focus {
+    transition: all .5s;
+    border: 1px solid #373737
+}
+
+.popup-form-input::placeholder {
+    font-family: Roboto-Light;
+    font-size: 1.4rem
+}
+
+.popup-form-btn {
+    padding: 2rem 3rem
+}
+
+.popup small {
+    display: inline-block;
+    font-size: 1.4rem;
+    font-family: Roboto-Light;
+    margin-top: 1rem
+}
+
+.popup-2 {
+    z-index: 25;
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 15;
+    background-color: rgba(0, 0, 0, 0.5)
+}
+
+.popup-2-close {
+    position: absolute;
+    text-align: center;
+    top: -4rem;
+    right: -3.5rem;
+    width: 4rem;
+    border: none;
+    font-size: 4rem;
+    font-family: Roboto-Light;
+    background-color: transparent;
+    color: #fff
+}
+
+.popup-2-features {
+    background-color: #f4f4f4;
+    padding: 0 3rem;
+    padding-bottom: 2rem
+}
+
+.popup-2-features-block {
+    background-color: #fff;
+    height: 10rem;
+    width: 100%;
+    margin-bottom: 0
+}
+
+.popup-2-features-block img {
+    float: left;
+    height: 6rem;
+    margin: 2rem 1.5rem
+}
+
+.popup-2-features-block h3 {
+    text-align: left;
+    font-size: 1.7rem;
+    font-family: Roboto-Medium;
+    padding: 2.5rem 1rem
+}
+
+.popup-2-content {
+    position: fixed;
+    background-color: #fff;
+    text-align: center;
+    left: 50%;
+    top: 5%;
+    transform: translatex(-50%);
+    z-index: 100;
+    height: auto;
+    width: 75%
+}
+
+.popup-2-header {
+    margin: 0;
+    padding-top: 2rem;
+    padding-bottom: 2rem
+}
+
+.popup-2-header-wrap {
+    background-color: #ff9d00
+}
+
+.popup-2-header-wrap h3 {
+    text-transform: uppercase;
+    font-size: 2.1rem;
+    font-family: Roboto-Medium;
+    color: #fff
+}
+
+.popup-2-info {
+    overflow: auto;
+    padding: 2rem 3rem;
+    text-align: left;
+    font-size: 1.6rem;
+    font-family: Roboto-Light;
+    height: 10rem
+}
+
+.popup-2-text {
+    padding: .5rem 0;
+    min-height: 30rem;
+    background: #fff url(../img/popup/popup-feedback.jpg) center no-repeat;
+    background-size: cover;
+    color: #fff
+}
+
+.popup-2-text h4 {
+    margin-top: 3rem;
+    font-size: 3rem
+}
+
+.popup-2-text span {
+    font-size: 2.4rem;
+    line-height: .2
+}
+
+.popup-2-text p {
+    font-size: 2rem;
+    font-family: Roboto-Light;
+    margin-bottom: 1rem;
+    margin-top: 2.5rem
+}
+
+.popup-2-form-input {
+    margin-right: 1.5rem;
+    margin-top: .5rem;
+    text-align: center;
+    color: #373737;
+    border: 1px solid #fff;
+    border-radius: 4px;
+    padding: 1rem;
+    width: 36rem;
+    height: 6rem;
+    transition: all .5s
+}
+
+.popup-2-form-input:focus {
+    transition: all .5s;
+    border: 1px solid #373737
+}
+
+.popup-2-form-input::placeholder {
+    font-family: Roboto-Light;
+    font-size: 1.4rem
+}
+
+.popup-2-form-btn {
+    padding: 2rem 3rem
+}
+
+.popup-2 small {
+    display: inline-block;
+    font-size: 1.4rem;
+    font-family: Roboto-Light;
+    margin-top: 1rem
+}
+
+@media (max-width: 1199px) {
+    .manufacture-title {
+        width: 108%
+    }
+    .manufacture-info p {
+        padding: 0;
+        font-size: 1.6rem
+    }
+}
+
+@media (max-width: 991px) {
+    header .nav a {
+        font-size: 1.1rem;
+        margin-top: 1.4rem
+    }
+    header .nav span {
+        display: inline-block;
+        border-right: dashed 1px #5f5f5f;
+        margin-right: .2rem;
+        margin-left: .2rem;
+        margin-bottom: -.5rem;
+        height: 2rem
+    }
+    header .phone-block p {
+        font-size: 1.8rem
+    }
+    header .phone-block p .border {
+        min-height: 2.5rem
+    }
+    header .header-btn {
+        text-align: center;
+        padding: 1rem .5rem;
+        margin-top: 3.4rem;
+        margin-bottom: 3.4rem
+    }
+    .main-content {
+        text-align: center
+    }
+    .main-content img {
+        display: none
+    }
+    .main-content .main-form {
+        margin-top: 2rem;
+        margin-bottom: 8rem;
+        padding: 1rem 3rem
+    }
+    .main-content .main-form-input {
+        float: none;
+        margin: 0 auto;
+        display: block
+    }
+    .main-content .main-form-input::placeholder {
+        text-align: center
+    }
+    .main-content .main-form-btn {
+        margin: 0 auto;
+        margin-top: 2rem;
+        min-width: 18rem
+    }
+    .main-content .main-form small {
+        margin-left: 0
+    }
+    .features-block-title {
+        min-height: auto
+    }
+    .manufacture-title {
+        padding: 1.5rem 3rem;
+        width: 110.5%
+    }
+    .manufacture-title h2 {
+        margin: 0;
+        font-size: 2rem
+    }
+    .manufacture-info p {
+        font-size: 1.4rem;
+        font-family: Roboto-Light;
+        margin-bottom: 2rem
+    }
+    .popup-content {
+        min-height: 35rem;
+        width: 75%
+    }
+    .popup-form-input {
+        margin: 0 auto;
+        margin-bottom: 1.5rem
+    }
+    .popup-form-btn {
+        margin: 0 auto;
+        padding: 2rem 11.8rem
+    }
+    .popup-text {
+        padding: 0 3rem
+    }
+    .popup small {
+        padding: 1rem;
+        margin-bottom: 3rem
+    }
+    .popup-2-features-block h3 {
+        font-size: 1.6rem
+    }
+    .popup-2-content {
+        width: 85%
+    }
+    .popup-2-text p {
+        margin-bottom: 0;
+        margin-top: 2rem
+    }
+    .popup-2-form-input {
+        margin-top: 2rem
+    }
+    .popup-2-form-btn {
+        padding: 2rem 3rem
+    }
+    .popup-2 small {
+        font-size: 1.4rem;
+        margin-top: 1.5rem
+    }
+}
+
+@media (min-width: 768px) {
+    .mobile-header,
+    .manufacture-mobile {
+        display: none
+    }
+}
+
+@media (max-width: 767px) {
+    header,
+    .manufacture-slider-nav,
+    .manufacture-block,
+    .popup-2-features {
+        display: none!important
+    }
+    .main-content .main-header {
+        font-size: 2.2rem;
+        color: #ff9d00;
+        margin-top: 5rem
+    }
+    .main-content p {
+        font-size: 1.8rem
+    }
+    .main-content .main-form {
+        background-color: rgba(0, 0, 0, 0);
+        margin-bottom: 5rem;
+        padding: 0
+    }
+    .main-content .main-form-header {
+        font-family: Roboto-Light;
+        padding: 1rem 0;
+        font-size: 1.5rem
+    }
+    .main-content .main-form p {
+        font-size: 1.5rem;
+        margin: 0
+    }
+    .main-content .main-form input {
+        height: 5rem;
+        width: 28rem
+    }
+    .main-content .main-form small {
+        font-size: 1.3rem;
+        margin-top: 1.5rem
+    }
+    .main-content .main-form-btn {
+        padding: 1.5rem
+    }
+    .features {
+        padding-top: .5rem;
+        padding-bottom: 4rem
+    }
+    .features-block-title {
+        min-height: auto
+    }
+    .features-block-title h2 {
+        font-size: 3rem
+    }
+    .features-block-title p {
+        font-size: 1.4rem
+    }
+    .features-block h3 {
+        font-family: Roboto-Medium;
+        font-weight: 900
+    }
+    .features-block img {
+        float: left;
+        padding: 4.5rem 1rem
+    }
+    .production {
+        padding: 0
+    }
+    .production-title h2 {
+        font-size: 2.2rem;
+        margin-top: 3rem
+    }
+    .production-title img {
+        display: none
+    }
+    .production-block {
+        min-height: 30rem;
+        margin-bottom: 5rem
+    }
+    .production-block h3 {
+        font-size: 1.8rem;
+        margin-top: 1rem;
+        margin-bottom: 0
+    }
+    .production-block img {
+        min-height: auto;
+        height: 21rem
+    }
+    .production-btn-light {
+        padding: 1.4rem 1.8rem
+    }
+    .production-btn {
+        padding: 1.5rem 1.8rem
+    }
+    .offer {
+        padding: 5rem 0
+    }
+    .offer-title {
+        font-size: 2rem;
+        font-family: Roboto-Bold
+    }
+    .offer p {
+        font-size: 1.6rem
+    }
+    .offer-form h3 {
+        font-size: 1.4rem
+    }
+    .offer-form-input {
+        width: 28rem;
+        height: 5rem
+    }
+    .offer-form-btn {
+        padding: 1.8rem 3rem
+    }
+    .offer-form small {
+        display: block;
+        margin-top: 1rem;
+        font-size: 1.4rem;
+        font-family: Roboto-Light
+    }
+    .manufacture {
+        padding: 3rem 0
+    }
+    .manufacture-slider {
+        padding: 0
+    }
+    .manufacture-slider-btn {
+        height: 8rem;
+        background-color: #ff9d00
+    }
+    .manufacture-slider-btn svg {
+        fill: #fff
+    }
+    .manufacture-slider-btn:hover {
+        background-color: #fff
+    }
+    .manufacture-slider-btn:hover svg {
+        fill: #ff9d00
+    }
+    .manufacture-slider .prev-btn {
+        left: 0
+    }
+    .manufacture-slider .next-btn {
+        right: 0
+    }
+    .manufacture-mobile {
+        text-align: center
+    }
+    .manufacture-mobile-title h2 {
+        margin-top: 0;
+        font-size: 2rem;
+        font-family: Roboto-Bold;
+        text-transform: uppercase;
+        color: #fff;
+        background-color: #ff9d00;
+        padding: 2rem
+    }
+    .manufacture-mobile-info {
+        padding: .5rem 1.5rem
+    }
+    .manufacture-mobile-info p {
+        font-size: 1.4rem;
+        font-family: Roboto-Light;
+        margin-bottom: 1.5rem
+    }
+    .clients {
+        padding-top: 2rem
+    }
+    .clients-title {
+        margin-bottom: 2rem
+    }
+    .clients-title img {
+        display: none
+    }
+    .clients-block {
+        height: 13rem;
+        margin-bottom: 1.5rem
+    }
+    .clients-block img {
+        max-width: 100%
+    }
+    .reviews {
+        background-color: #f4f4f4;
+        padding: 4rem 0
+    }
+    .reviews-title img {
+        display: none
+    }
+    .reviews-block {
+        margin: 0;
+        padding: 0;
+        border: none;
+        background: none
+    }
+    .reviews-block img {
+        width: 100%;
+        margin: 0 auto;
+        border: 1px solid #dbdbdb;
+        background-color: #fff;
+        border-radius: 4px
+    }
+    .reviews-btn {
+        background: #ff9d00
+    }
+    .reviews-btn svg {
+        width: auto;
+        height: 3rem;
+        fill: #fff
+    }
+    .reviews-prev-btn {
+        left: 1rem
+    }
+    .reviews-next-btn {
+        right: 1rem
+    }
+    .contacts {
+        padding: 2rem
+    }
+    .contacts-block {
+        position: static;
+        height: 100%;
+        width: 100%;
+        text-align: center;
+        padding: 1rem;
+        margin: 0
+    }
+    .contacts-block .map-content {
+        margin: 0
+    }
+    .contacts-block .map-content h2 {
+        display: initial;
+        text-transform: uppercase;
+        font-size: 2.2rem;
+        font-family: Roboto-Bold
+    }
+    .contacts-block .map-content img {
+        display: none
+    }
+    .contacts-block .map-content h3 {
+        font-size: 1.8rem;
+        margin-left: 0
+    }
+    .contacts-block .map-content p {
+        font-size: 1.4rem;
+        margin-left: 0
+    }
+    .contacts-btn {
+        margin-left: 0
+    }
+    .contacts .map {
+        height: 42rem
+    }
+    .popup-content {
+        width: 80%
+    }
+    .popup-header-wrap h3 {
+        font-size: 1.8rem
+    }
+    .popup-text {
+        padding: 1rem
+    }
+    .popup-text h4 {
+        margin-top: 2rem;
+        font-size: 1.8rem
+    }
+    .popup-text span {
+        font-size: 1.8rem
+    }
+    .popup-text p {
+        font-size: 1.4rem
+    }
+    .popup-form-input {
+        width: 85%
+    }
+    .popup-form-btn {
+        width: 85%;
+        padding: 2rem 0
+    }
+    .popup small {
+        font-size: 1.3rem;
+        margin-top: 1rem;
+        margin-bottom: 1rem
+    }
+    .popup-2-content {
+        top: 10%;
+        width: 80%
+    }
+    .popup-2-header-wrap {
+        padding: 0 2rem
+    }
+    .popup-2-header-wrap h3 {
+        font-size: 1.4rem
+    }
+    .popup-2-header-wrap h3 span {
+        display: inline-block
+    }
+    .popup-2-info {
+        height: 20rem;
+        font-size: 1.4rem
+    }
+    .popup-2-text {
+        padding: 1rem
+    }
+    .popup-2-text h4 {
+        margin-top: 2rem;
+        font-size: 1.8rem
+    }
+    .popup-2-text span {
+        font-size: 1.8rem
+    }
+    .popup-2-text p {
+        font-size: 1.4rem
+    }
+    .popup-2-form-input {
+        margin: 0 auto;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        width: 85%
+    }
+    .popup-2-form-btn {
+        width: 85%;
+        padding: 2rem 0
+    }
+    .popup-2 small {
+        font-size: 1.3rem;
+        margin-top: 1rem;
+        margin-bottom: 1rem
+    }
+}
